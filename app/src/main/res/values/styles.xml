@@ -1,0 +1,53 @@
+<resources>
+
+    <!-- Base application theme.  Theme.AppCompat.Light.DarkActionBar-->
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <item name="android:colorPrimary">#424242</item> <!-- ActionBar -->
+        <item name="android:colorPrimaryDark">#424e4f</item> <!-- Barra de estado -->
+        <item name="android:textColorPrimary">#ffff</item> <!-- Color del text -->
+
+        <!-- Main theme colors -->
+        <!--   darker variant for the status bar and contextual app bars -->
+    </style>
+
+
+    <style name="AppTheme.Dialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+    </style>
+
+    <style name="EditTextThemeElement" parent="android:Widget.EditText">
+        <item name="android:background">@drawable/themeelement_edit_text_holo_light</item>
+        <item name="android:textColor">#fffbf0</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+    <style name="AutoCompleteTextViewThemeElement" parent="android:Widget.AutoCompleteTextView">
+        <item name="android:dropDownSelector">@drawable/themeelement_list_selector_holo_light</item>
+        <item name="android:background">@drawable/themeelement_edit_text_holo_light</item>
+        <item name="android:textColor">#fffbf0</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+    <style name="ButtonThemeElement" parent="android:Widget.Button">
+        <item name="android:background">#28a3b2</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:minWidth">64dip</item>
+        <item name="android:textColor">#fffbf0</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+    <style name="ButtonThemeElement2" parent="android:Widget.Button">
+        <item name="android:background">#f45d5d</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:minWidth">64dip</item>
+        <item name="android:textColor">#fffbf0</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+    <style name="SpinnerThemeElement" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/themeelement_spinner_background_holo_light</item>
+        <item name="android:dropDownSelector">@drawable/themeelement_list_selector_holo_light</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+    <style name="ImageButtonThemeElement" parent="android:Widget.ImageButton">
+        <item name="android:background">#3f3a3a</item>
+    </style>
+
+</resources>

@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">Pago QR</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_scan_code_qr">Escanear QR</string>
+
+    <string name="genernado_qr">Generando QR-Pago</string>
+    <string name="action_settings">Herramientas</string>
+    <string name="username">UserName</string>
+    <string name="password">Password</string>
+    <string name="title_activity_menu_principal">Menu principal</string>
+
+    <string name="monto_pago">Monto</string>
+    <string name="tarjeta_pago">Tarjeta</string>
+    <string name="seleccion_tarjeta">Seleccione tarjeta</string>
+    <string name="codigo_comercio">Código comercio</string>
+    <string name="title_activity_inicio_pago">InicioPago</string>
+
+    <string name="title_activity_menu_principal_1">Menu Principal</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+    <string name="title_activity_create_pay">Crear Pago</string>
+
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Nombre_Usuario</string>
+    <string name="prompt_password">***********</string>
+    <string name="action_sign_in">Iniciar sesión</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+
+    <!-- Strings related to ArrayCard -->
+    <string name="card0"> - </string>
+    <string name="card3">VirtualCard</string>
+    <string name="card1">Visa</string>
+    <string name="card2">MasterCard</string>
+    <string name="title_activity_generar_qr">GenerarQR</string>
+    <string name="title_activity_detalle_pago">DetallePago</string>
+
+
+    <!-- Strings use camera -->
+
+    <string name="scanner_activity">ZXing Scanner - Full Activity</string>
+    <string name="scanner_fragment_activity">ZXing Scanner - Full Fragment Activity</string>
+    <string name="simple_scanner_activity">ZXing Scanner - Simple Activity</string>
+    <string name="simple_scanner_fragment_activity">ZXing Scanner - Simple Fragment Activity</string>
+    <string name="simple_activity_sample">Simple Activity Sample</string>
+    <string name="simple_fragment_sample">Simple Fragment Sample</string>
+    <string name="activity_sample">Full Activity Sample</string>
+    <string name="fragment_sample">Full Fragment Sample</string>
+    <string name="toggle_flash">Flash</string>
+    <string name="flash_on">Flash [ON]</string>
+    <string name="flash_off">Flash [OFF]</string>
+    <string name="auto_focus_on">Auto Focus [ON]</string>
+    <string name="auto_focus_off">Auto Focus [OFF]</string>
+    <string name="formats">Formats</string>
+    <string name="choose_formats">Choose Formats</string>
+    <string name="select_camera">Select a Camera</string>
+    <string name="ok_button">OK</string>
+    <string name="cancel_button">Cancel</string>
+
+    <!-- Generate code qr-->
+    <string name="generate_qr_round">Touch to generate a QR code (round device)</string>
+    <string name="generate_qr_square">Touch to generate a QR code (square device)</string>
+    <string name="string_to_encode">Emily Pagua, Generando Codigo QR Finalmente</string>
+    <string name="encode_error">Unable to generate QR Code</string>
+    <string name="qr_image_description">QR Code Image</string>
+    <string name="title_activity_main_menu">MainMenu</string>
+    <string name="title_activity_create_payment">CreatePayment</string>
+    <string name="title_activity_generate_code_qr">GenerateCodeQR</string>
+    <string name="title_activity_scanner">ScannerActivity</string>
+    <string name="title_activity_transaction_detail">TransactionDetail</string>
+    <string name="title_activity_main_activity2">MainActivity2</string>
+    <string name="title_activity_main_fragment">MainFragment</string>
+
+
+</resources>

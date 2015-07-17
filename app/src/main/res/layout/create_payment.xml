@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.paymentqr.CreatePayment">
+
+    <ScrollView android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="40dp">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="Seleccione tarjeta de debitar"
+                android:id="@+id/twCard" />
+
+            <Spinner
+                style="@style/SpinnerThemeElement"
+                android:id="@+id/spAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+            </Spinner>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Saldo disponible"
+                android:id="@+id/twAvailabilityAccount"
+                />
+            <EditText
+                style="@style/EditTextThemeElement"
+                android:id="@+id/etxAvailabilityAccount"
+                android:hint="Bsf"
+                android:text=""
+                android:enabled="false"
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Monto  a pagar"
+                android:id="@+id/twMonto"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                style="@style/EditTextThemeElement"
+                android:id="@+id/etxMonto"
+                android:hint="100"
+                android:text=""
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Código comercio"
+                android:id="@+id/twCodComercio"
+                />
+
+            <EditText
+                style="@style/EditTextThemeElement"
+                android:id="@+id/etxCodigo"
+                android:hint="010909"
+                android:text=""
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <Button
+                style="@style/ButtonThemeElement"
+                android:id="@+id/btaceptar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="ACEPTAR"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:onClick="generateQR"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

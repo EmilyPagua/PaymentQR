@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ARRAY CARD-->
+    <array name="array_tarjetas">
+        <item>@string/card0</item>
+        <item>@string/card1</item>
+        <item>@string/card2</item>
+        <item>@string/card3</item>
+    </array>
+
+    <!-- Option read code qr-->
+    <item type="id" name="menu_flash" />
+    <item type="id" name="menu_auto_focus" />
+    <item type="id" name="menu_formats" />
+    <item type="id" name="menu_camera_selector" />
+ </resources>

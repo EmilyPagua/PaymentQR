@@ -1,0 +1,14 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".webService.MainActivity2">
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.example.paymentqr.webService.MainFragment"
+        android:id="@+id/main_fragment"
+        tools:layout="@layout/fragment_main" />
+
+</RelativeLayout>
