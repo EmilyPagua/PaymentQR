@@ -83,7 +83,7 @@ public class ScannerActivity extends ActionBarActivity implements MessageDialogF
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuItem menuItem;
 
-        if(mFlash) {
+       /* if(mFlash) {
             menuItem = menu.add(Menu.NONE, R.id.menu_flash, 0, R.string.flash_on);
         } else {
             menuItem = menu.add(Menu.NONE, R.id.menu_flash, 0, R.string.flash_off);
@@ -103,7 +103,7 @@ public class ScannerActivity extends ActionBarActivity implements MessageDialogF
 
         menuItem = menu.add(Menu.NONE, R.id.menu_camera_selector, 0, R.string.select_camera);
         MenuItemCompat.setShowAsAction(menuItem, MenuItem.SHOW_AS_ACTION_ALWAYS);
-
+*/
         return super.onCreateOptionsMenu(menu);
     }
 

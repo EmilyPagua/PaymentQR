@@ -1,22 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:orientation="vertical"
-    tools:context=".MainActivity" tools:deviceIds="wear_square">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="#FFFFFF"
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Código Generado, espero por aprobacion de transacción..!"
-        android:id="@+id/textDesc" />
+    tools:deviceIds="wear_square">
 
-    <ImageView
-        android:layout_below="@+id/textDesc"
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/imageQR"
-        android:contentDescription="@string/qr_image_description"
-        android:visibility="gone"
-        />
+        android:layout_height="wrap_content"
+        android:id="@+id/backgroundReverso"
+        android:background="@color/blue"
+        android:orientation="vertical" >
 
-</RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/top_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/header_tabs"
+            android:padding="10dip" >
+
+            <TextView
+                android:textColor="#FFFFFF"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:drawableLeft="@drawable/oko_logo"
+                android:text="Código QR"  />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Código Generado, espero por aprobacion de transacción..!"
+            android:id="@+id/textDesc" />
+
+        <ImageView
+            android:layout_below="@+id/textDesc"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageQR"
+            android:contentDescription="@string/qr_image_description"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

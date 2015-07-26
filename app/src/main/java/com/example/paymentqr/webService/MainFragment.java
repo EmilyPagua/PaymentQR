@@ -7,12 +7,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.paymentqr.R;
 
-import org.json.JSONObject;
 import android.util.Log;
 public class MainFragment extends BaseVolleyFragment {
     private TextView label;
@@ -22,7 +18,7 @@ public class MainFragment extends BaseVolleyFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View v = inflater.inflate(R.layout.main_fragment, container, false);
+        View v = inflater.inflate(R.layout.fragment_main, container, false);
         label = (TextView) v.findViewById(R.id.label);
         connector = (Button) v.findViewById(R.id.connection_button);
         Log.d(TAG, "onCreateView despues de asignar el label y el connector");

@@ -79,5 +79,7 @@
     <string name="title_activity_main_activity2">MainActivity2</string>
     <string name="title_activity_main_fragment">MainFragment</string>
 
+    <string name="titulo_detalle">Seleccione tarjeta a debitar</string>
+
 
 </resources>

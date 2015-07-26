@@ -1,5 +1,6 @@
 package com.example.paymentqr;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -17,7 +18,7 @@ import android.widget.Spinner;
 
 import com.example.paymentqr.createQR.GenerateCodeQR;
 
-public class CreatePayment extends ActionBarActivity {
+public class CreatePayment extends Activity {
 
     private Spinner spinnerCount;
     private EditText etxMonto, etxCodigo, etxAvailabilityAccount;
@@ -48,16 +49,14 @@ public class CreatePayment extends ActionBarActivity {
                                        int position, long id) {
                 idTarjeta = parent.getItemAtPosition(position).toString();
 
-                if (idTarjeta.equals("Visa")){
+                if (idTarjeta.equals("Visa")) {
                     idTarjeta = "V-1234566";
                     etxAvailabilityAccount.setText("5.000");
-                }
-                else if (idTarjeta.equals("MasterCard")){
+                } else if (idTarjeta.equals("MasterCard")) {
                     idTarjeta = "MC-9999999";
                     etxAvailabilityAccount.setText("2.000");
 
-                }
-                else if (idTarjeta.equals("VirtualCard")){
+                } else if (idTarjeta.equals("VirtualCard")) {
                     idTarjeta = "VC-11111111";
                     etxAvailabilityAccount.setText("3.000");
                 }
@@ -88,33 +87,6 @@ public class CreatePayment extends ActionBarActivity {
             b.putInt("idCodigoComercio", Integer.valueOf(etxCodigo.getText().toString()));
             intent.putExtras(b);
             startActivity(intent);
-            finish();
         }
-
-
-    }
-
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.create_payment, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }

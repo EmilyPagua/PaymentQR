@@ -53,7 +53,7 @@ public class MainActivity extends ActionBarActivity {
                                 alertDialogBuilder.show();
                             }
                         }*/
-        Intent intent = new Intent(MainActivity.this, MainMenu.class);
+        Intent intent = new Intent(MainActivity.this, MainTabActivity.class);
         Bundle b = new Bundle();
         intent.putExtras(b);
         startActivity(intent);

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="ButtonThemeElement" parent="android:Widget.Button">
+	  <item name="android:background">@drawable/themeelement_btn_default_holo_light</item>
+	  <item name="android:minHeight">48dip</item>
+	  <item name="android:minWidth">64dip</item>
+      <item name="android:textColor" >#ffffff</item>
+      <item name="android:gravity" >center</item>
+      <item name="android:layout_margin" >3dp</item>
+      <item name="android:textSize" >25dp</item>
+      <item name="android:textStyle" >bold</item>
+      <item name="android:shadowColor" >#000000</item>
+      <item name="android:shadowDx" >1</item>
+      <item name="android:shadowDy" >1</item>
+      <item name="android:shadowRadius" >2</item>
+  </style>
+
+  <style name="ImageButtonThemeElement" parent="android:Widget.ImageButton">
+	  <item name="android:background">@drawable/themeelement_btn_default_holo_light</item>
+  </style>
+
+  <style name="SpinnerThemeElement" parent="android:Widget.Spinner">
+      <item name="android:background">@drawable/themeelement_spinner_focused_holo_light</item>
+      <item name="android:dropDownSelector">@drawable/themeelement_list_selector_holo_light</item>
+  </style>
+
+  <style name="SpinnerDropDownItemThemeElement" parent="android:Widget.DropDownItem.Spinner">
+      <item name="android:checkMark">@drawable/themeelement_btn_radio_holo_light</item>
+  </style>
+</resources>

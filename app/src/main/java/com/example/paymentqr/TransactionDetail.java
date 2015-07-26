@@ -28,12 +28,12 @@ public class TransactionDetail extends ActionBarActivity {
     }
 
     public void aceptTransaction(View v) {
-        Intent intent = new Intent(this, MainMenu.class);
+        Intent intent = new Intent(this, MainTabActivity.class);
         startActivity(intent);
         finish();
     }
     public void rejectsTransaction(View v) {
-        Intent intent = new Intent(this, MainMenu.class);
+        Intent intent = new Intent(this, MainTabActivity.class);
         startActivity(intent);
         finish();
     }

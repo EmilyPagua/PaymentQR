@@ -1,16 +1,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.paymentqr.MainMenu">
-    <item android:id="@+id/action_search"
-        android:icon="@drawable/ic_cast_light"
-        android:title="ic_cast_light"
-        android:showAsAction="ifRoom"
-        tools:ignore="AppCompatResource,MissingPrefix"
-        showAsAction="ifRoom|withText"/>
-    <item android:id="@+id/action_compose"
-        android:icon="@drawable/ic_pause_light"
-        android:title="ic_pause_light"
-        tools:ignore="AppCompatResource,MissingPrefix"
-        showAsAction="ifRoom|withText"/>
+    tools:context=".MainActivity">
+
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
 </menu>

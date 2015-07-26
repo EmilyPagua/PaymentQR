@@ -4,7 +4,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:background="#FFFFFF"
     android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/backgroundReverso"
+        android:background="@color/blue"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/top_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/header_tabs"
+            android:padding="10dip" >
+
+            <TextView
+                android:textColor="#FFFFFF"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Comprobante Transacción"  />
+
+        </RelativeLayout>
+    </LinearLayout>
+
 
     <ScrollView
         android:id="@+id/login_form"
@@ -20,50 +50,38 @@
             android:layout_marginTop="40dp">
 
             <TextView
-                android:layout_marginTop="10dp"
-                android:id="@+id/scanDetail"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Detalle">
-            </TextView>
-
-            <TextView
                 android:id="@+id/scanResult"
+                android:text="Detalle Transacción"
+                style="@style/TextViewTitulo"
+                android:gravity="center|center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_marginTop="25dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/scanDetail">
-            </TextView>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="40dp">
-            <Button
-                style="@style/ButtonThemeElement"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:id="@+id/transactionYes"
-                android:layout_marginTop="16dp"
-                android:text="Aceptar"
-                android:textStyle="normal"
-                android:textColor="#FFF"
-                android:onClick="aceptTransaction"
-                android:layout_width="match_parent" />
-            <Button
-                style="@style/ButtonThemeElement"
-                android:layout_weight="1"
-                android:id="@+id/TransactionNO"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Rechazar"
-                android:textStyle="normal"
-                android:textColor="#FFF"
-                android:onClick="rejectsTransaction"
-                android:layout_width="match_parent" />
-        </LinearLayout>
+                android:orientation="vertical">
+                <Button
+                    style="@style/ButtonThemeElementBlue"
+                    android:id="@+id/transactionYes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Aceptar"
+                    android:onClick="aceptTransaction"
+                    android:textStyle="normal"/>
+                <Button
+                    style="@style/ButtonThemeElementBlue"
+                    android:id="@+id/TransactionNO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Rechazar"
+                    android:onClick="rejectsTransaction"
+                    android:textStyle="normal"/>
+            </LinearLayout>
        </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -7,7 +7,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/oko_logo_blanco"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -16,8 +16,15 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainTabActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
             android:name=".MainMenu"
@@ -25,8 +32,8 @@
         </activity>
         <activity
             android:name=".CreatePayment"
-            android:label="@string/title_activity_create_payment"
-            android:theme="@style/AppTheme.Dialog" >
+            android:label="Crear Pago"
+            >
         </activity>
         <activity
             android:name=".createQR.GenerateCodeQR"
@@ -34,7 +41,8 @@
         </activity>
         <activity
             android:name=".scanQR.ScannerActivity"
-            android:label="@string/title_activity_scanner" >
+            android:label="@string/title_activity_scanner"
+            >
         </activity>
         <activity
             android:name=".TransactionDetail"
