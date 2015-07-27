@@ -52,6 +52,7 @@
             android:text="Código Generado, espero por aprobacion de transacción..!"
             android:id="@+id/textDesc" />
 
+
         <ImageView
             android:layout_below="@+id/textDesc"
             android:layout_width="fill_parent"

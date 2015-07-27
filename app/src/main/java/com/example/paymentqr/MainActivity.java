@@ -61,6 +61,7 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
+
     public void register(View v) {
         Intent intent = new Intent(MainActivity.this, MainActivity2.class);
         Bundle b = new Bundle();

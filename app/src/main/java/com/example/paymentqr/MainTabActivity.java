@@ -88,6 +88,7 @@ public class MainTabActivity extends TabActivity {
 		}
 	}
 
+
 	private static View createTabView(final Context context, final String text) {
 		View view = LayoutInflater.from(context).inflate(R.layout.tabs_bg, null);
 		ImageView tab_image = (ImageView) view.findViewById(R.id.tab_image);
