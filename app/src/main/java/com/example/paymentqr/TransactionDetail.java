@@ -1,17 +1,20 @@
 package com.example.paymentqr;
 
+import android.app.Activity;
+import android.app.ActivityGroup;
+import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.telephony.TelephonyManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.paymentqr.scanQR.ScannerActivity;
 
+public class TransactionDetail extends Activity {
 
-public class TransactionDetail extends ActionBarActivity {
+    private static final String TAG = "TransactionDetail";
 
     private TextView detailResultTxt;
 
@@ -21,10 +24,10 @@ public class TransactionDetail extends ActionBarActivity {
         setContentView(R.layout.transaction_detail);
 
         Bundle bundle = getIntent().getExtras();
-        final String result = bundle.getString("RESULT");
+        final String result = bundle.getString("resultadoScanner");
 
         detailResultTxt = (TextView)findViewById(R.id.scanResult);
-        detailResultTxt.setText(result);
+        detailResultTxt.setText(" Resultado Transacción "+result);
     }
 
     public void aceptTransaction(View v) {
@@ -32,34 +35,11 @@ public class TransactionDetail extends ActionBarActivity {
         startActivity(intent);
         finish();
     }
-    public void rejectsTransaction(View v) {
-        Intent intent = new Intent(this, MainTabActivity.class);
-        startActivity(intent);
-        finish();
-    }
 
+    public String getNumeroTelefono(){
+        TelephonyManager mTelephonyManager;
+        mTelephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+        return mTelephonyManager.getLine1Number();
 
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.transaction_detail, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }

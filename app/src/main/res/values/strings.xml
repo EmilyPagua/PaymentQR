@@ -74,12 +74,18 @@
     <string name="title_activity_main_menu">MainMenu</string>
     <string name="title_activity_create_payment">CreatePayment</string>
     <string name="title_activity_generate_code_qr">GenerateCodeQR</string>
-    <string name="title_activity_scanner">ScannerActivity</string>
+    <string name="title_activity_scanner">Escanear codigo QR</string>
     <string name="title_activity_transaction_detail">TransactionDetail</string>
     <string name="title_activity_main_activity2">MainActivity2</string>
     <string name="title_activity_main_fragment">MainFragment</string>
-
     <string name="titulo_detalle">Seleccione tarjeta a debitar</string>
+    <string name="title_activity_main_scanner">MainScannerActivity</string>
+    <string name="title_activity_main_fragment_scanner">MainFragmentScanner</string>
+
+    <string name="no_front_camera_found">No front facing camera found, using default one instead...</string>
+    <string name="camera_error">Camera initialization error: %s</string>
+    <string name="title_activity_scan">ScanActivity</string>
+    <string name="title_activity_main_activity_scan">MainActivityScan</string>
 
 
 </resources>

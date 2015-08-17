@@ -6,7 +6,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity"
     android:background="#FFFFFF"
-
     tools:deviceIds="wear_square">
 
     <LinearLayout
@@ -34,6 +33,16 @@
                 android:gravity="center"
                 android:drawableLeft="@drawable/oko_logo"
                 android:text="Código QR"  />
+
+            <Button
+                android:id="@+id/atrasButton"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/button_tab_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:text="Atras"/>
 
         </RelativeLayout>
     </LinearLayout>

@@ -38,6 +38,7 @@
                     android:text="Pago QR"  />
             </RelativeLayout>
         </LinearLayout>
+
             <ScrollView
             android:id="@+id/login_form"
             android:layout_width="match_parent"

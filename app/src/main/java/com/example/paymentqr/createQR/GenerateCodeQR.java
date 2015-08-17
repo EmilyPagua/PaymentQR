@@ -4,12 +4,10 @@ import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.AsyncTask;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -37,7 +35,7 @@ public class GenerateCodeQR extends Activity {
         final int idMonto = bundle.getInt("idMonto");
         final int idCodigoComercio = bundle.getInt("idCodigoComercio");
         final String nameTarjeta = bundle.getString("idTarjeta");
-        String idTarjeta = null;
+        String idTarjeta = "1323234234";
 
         mImageQR = (ImageView) findViewById(R.id.imageQR);
         mEncodeString = "id_cliente: " + "18740265" +
@@ -50,6 +48,16 @@ public class GenerateCodeQR extends Activity {
         mTextDesc = (TextView) findViewById(R.id.textDesc);
 
         new AsyncGenerateQRCode().execute(GenerateQR.MARGIN_AUTOMATIC);
+
+        Button atrasReversarButton = (Button) findViewById(R.id.atrasButton);
+        atrasReversarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CreatePayment.self.back();
+            }
+        });
+
+
     }
     /**
      * AsyncTask to generate QR Code image
@@ -75,8 +83,8 @@ public class GenerateCodeQR extends Activity {
                 final int colorQR = Color.BLACK;
                 final int colorBackQR = Color.WHITE;
                 final int marginSize = params[0];
-                final int width = 400;
-                final int height = 400;
+                final int width = 450;
+                final int height = 450;
 
                 mBitmapQR = GenerateQR.generateBitmap(mEncodeString, width, height,
                         marginSize, colorQR, colorBackQR);
@@ -111,25 +119,6 @@ public class GenerateCodeQR extends Activity {
         @Override
         protected void onProgressUpdate(Void... values) {}
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.generate_code_qr, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

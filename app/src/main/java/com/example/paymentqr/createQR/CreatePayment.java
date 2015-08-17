@@ -1,43 +1,47 @@
-package com.example.paymentqr;
+package com.example.paymentqr.createQR;
 
 import android.app.Activity;
+import android.app.ActivityGroup;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import com.example.paymentqr.createQR.GenerateCodeQR;
+import com.example.paymentqr.R;
 
-public class CreatePayment extends Activity {
+import java.util.ArrayList;
+
+public class CreatePayment extends ActivityGroup {
+
+    public static CreatePayment self;
+    private ArrayList<View> history;
 
     private Spinner spinnerCount;
     private EditText etxMonto, etxCodigo, etxAvailabilityAccount;
     private static String idTarjeta;
-    private Button btnAcept;
+    ArrayAdapter adapter;
     final Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.history = new ArrayList<View>();
+        self = this;
+
         setContentView(R.layout.create_payment);
 
         spinnerCount = (Spinner)findViewById(R.id.spAccount);
-        btnAcept = (Button) findViewById(R.id.btaceptar);
         etxMonto = (EditText)findViewById(R.id.etxMonto);
         etxCodigo = (EditText)findViewById(R.id.etxCodigo);
         etxAvailabilityAccount = (EditText)findViewById(R.id.etxAvailabilityAccount);
 
-        ArrayAdapter adapter = ArrayAdapter.createFromResource(
+        adapter = ArrayAdapter.createFromResource(
                 this, R.array.array_tarjetas, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
@@ -86,7 +90,34 @@ public class CreatePayment extends Activity {
             b.putInt("idMonto", Integer.valueOf(etxMonto.getText().toString()));
             b.putInt("idCodigoComercio", Integer.valueOf(etxCodigo.getText().toString()));
             intent.putExtras(b);
-            startActivity(intent);
+            replaceContentView("GenerarPago", intent);
+        }
+    }
+    public void limpiarCampos(View v) {
+        etxMonto.setText("");
+        etxCodigo.setText("");
+        etxAvailabilityAccount.setText("");
+        spinnerCount.setAdapter(adapter);
+
+    }
+
+    public void replaceContentView(String id, Intent newIntent) {
+        this.history.add(getWindow().findViewById(R.id.createPayment));
+        View view = getLocalActivityManager().startActivity(id, newIntent).getDecorView();
+        this.history.add(view);
+        this.setContentView(view);
+    }
+
+    public void back()
+    {
+        if(history.size() > 1){
+            history.remove(history.size()-1);
+            View view = history.get(history.size()-1);
+            Activity activity = (Activity) view.getContext();
+            setContentView(view);
+        }
+        else{
+            finish();
         }
     }
 
